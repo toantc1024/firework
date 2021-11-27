@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Cube Flipping Loader</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="./timer.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'></head>
+<body>
+  <style>
+    hr{
+      border: 2px solid #ffe392;
+      border-radius: 5px;
+      background-color: #ffe392;
+      width:50%;
+      text-align: center;
+    }
+  </style>
+<!-- partial:index.partial.html -->
+<h1  style="	font-weight: 700;font-family: 'Lato', Helvetica, Arial, 'ヒラギノ角ゴシック体 GB W6', Hiragino Sans GB W6, 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif; font-size:5vh; color:rgb(255, 218, 137)">
+  GIAO THỪA 2022 
+  <hr><p  id="demo" style="font-family: 'Lato', Helvetica, Arial, 'ヒラギノ角ゴシック体 GB W6', Hiragino Sans GB W6, 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif; font-size:3.05vh; color:#ffffffef"></p>
+</h1>
+<!DOCTYPE HTML>
+<html>
+<head>
+  
+  <script src="./responsivevoice.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+p {
+  text-align: center;
+  font-size: 60px;
+  color: #ffe392;
+  margin-top: 0px;
+  
+	font-family: "Lato", Helvetica, Arial, "ヒラギノ角ゴシック体 GB W6", Hiragino Sans GB W6, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+h2 {
+
+  margin-top: 0px;
+  text-align: center;
+	font-size: 3em;
+	text-transform: uppercase;
+	font-weight: 700;
+	word-spacing: 5px;
+}
+</style>
+</head>
+<body>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Nov 27, 2021 11:06:00").getTime();
+localStorage.setItem("TIME_TO_STOP",false);      document.getElementById("demo").innerHTML = "NĂM MỚI BÌNH AN, SUNG TÚC, THÀNH CÔNG";  
+// Update the count down every 1 second
+var x = setInterval(function() {
+  // Get today's date and time
+  responsiveVoice.enableWindowClickHook();
+
+     var now = new Date().getTime();
+   // console.log(data.datetime);
+    // console.log(now);
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+ // console.log(seconds);
+  // Output the result in an element with id="demo"
+  if(distance<30000){
+    if(seconds<11){
+      var log = ["Happy Lunar New Year 🎉🥳", "Một 😊","Hai 😎","Ba 🙄","Bốn 🤣", "Năm 🌸", "Sáu 🧧", "Bảy 🍀", "Tám 💬","Chín 👍","Mười 👋"];
+      var log2 = ["Happy Lunar New Year", "One","Two","Three","Four", "Five", "Six", "Seven", "Eight","Nine","Ten"];
+      var log3 = ["Female","Male","Male","Female","Male","Female","Male","Female","Male","Female","Male","Female"];
+      document.getElementById("demo").innerHTML = log[seconds];
+      responsiveVoice.speak(log2[seconds], "UK English "+log3[seconds]);
+      if(seconds<0){
+        localStorage.setItem("TIME_TO_STOP",true);
+      }
+    } else {
+      document.getElementById("demo").innerHTML = "CÒN "+ seconds + " GIÂY NỮA LÀ TẾT ";
+    
+    }
+    
+  } else {
+    if(days>0){
+      document.getElementById("demo").innerHTML = "SỰ KIỆN DIỄN RA SAU: " + days+ " NGÀY " + hours + " GIỜ "
+  + minutes + " PHÚT " + seconds + " GIÂY ";
+    } else {
+      if(hours>0){
+        document.getElementById("demo").innerHTML = "SỰ KIỆN DIỄN RA SAU: " +hours + " GIỜ "
+  + minutes + " PHÚT " + seconds + " GIÂY ";
+      } else {
+        if(minutes>0){
+          document.getElementById("demo").innerHTML = "SỰ KIỆN DIỄN RA SAU: " +minutes + " PHÚT " + seconds + " GIÂY ";
+        } else {
+          document.getElementById("demo").innerHTML = "SỰ KIỆN DIỄN RA SAU: " +seconds + " GIÂY ";
+        }
+      }
+    }
+
+    
+  }
+
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    
+    document.getElementById("demo").innerHTML = "CHÚC MỪNG NĂM MỚI";
+  }
+}, 1000);
+</script>
+
+</body>
+<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="4f8209ce-920e-4dd8-a463-ce8b87a5defc";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+</html>
+
+<div class="cube-wrapper">
+  <div class="cube-folding">
+    <span class="leaf1"></span>
+    <span class="leaf2"></span>
+    <span class="leaf3"></span>
+    <span class="leaf4"></span>
+  </div>
+  <span style="font-family: 'Lato', Helvetica, Arial, 'ヒラギノ角ゴシック体 GB W6', Hiragino Sans GB W6, 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif; font-size: 1.85vh;" class="loading" data-name="Loading">Tài trợ bởi tập thể 12A1</span>
+</div>
+
+<!-- follow me template -->
+<div class="made-with-love">
+  Hoàn thành với tất cả tình yêu
+  <i>💛</i> bởi
+  <a target="_blank" href="https://codepen.io/nikhil8krishnan">Nikhil Krishnan & DonGhelix2004</a>
+</div>
+<!-- partial -->
+<div class="powr-music-player" id="f1bdac38_1637992976"></div><script src="https://www.powr.io/powr.js?platform=html"></script>
+</body>
+
+</html>

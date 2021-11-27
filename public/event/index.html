@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Demo - Upcoming Events - List 1</title>
+      <link rel='stylesheet' id='Source+Sans+Pro-css' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A100%2C300%2C400%2C400italic%2C500%2C700%2C900&#038;ver=4.4.2' type='text/css' media='all' />
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- Target elements -->
+<div class="arlo">
+  <div class="arlo-page-title arlo-font-primary">
+    <h2>Demos - Upcoming Events - List 1</h2>
+  </div>
+  <div id="upcoming-events-list1"></div>
+</div>
+
+<!-- Templates -->
+<script type='text/template' id='upcoming-events-list1-template'>
+  <div class="left">
+    <div class="date">
+      <%= formatDate(StartDateTime, "ddd, DD MMM YYYY") %>
+    </div>
+    <div class="time">
+      <%= formatDate(StartDateTime, "LT") %> -
+        <%= formatDate(EndDateTime, "LT") %>
+    </div>
+    <div class="location">
+      <% if (typeof(Location.IsOnline) !== "undefined" && Location.IsOnline === true && (typeof(Location.Name) !== "undefined" && Location.Name !== "")) { %>
+        Online
+        <% } else { %>
+          <%=  Location.Name %>
+            <% }  %>
+    </div>
+  </div>
+
+  <div class="middle">
+    <h3><%- Name %></h3>
+    <div class="summary">
+      <%- Summary %>
+    </div>
+    <% if (Presenters.length > 0) {  %>
+      <div class="presenters">
+        <span class="presenterlabel">Presented By </span>
+        <span class="presenter">
+                            <%= formatCollection(Presenters, "csv", true) %>
+                        </span>
+      </div>
+      <% }  %>
+  </div>
+
+  <div class="right">
+    <div class="duration">
+      <span class="label"><i class="fa fa-clock-o" aria-hidden="true"></i></span><span class="content"><%- Duration %></span>
+    </div>
+    <div class="offers">
+      <%= formatAdvertisedOffers({
+                    showPriceWithTaxInclusive: false,
+                    showSingleOffer: false,
+                    showLabel: true,
+                    showCurrencyCode: false,
+                    showMessage: true,
+                    showTaxRate: true
+                    }) %>
+    </div>
+
+    <div class="registration">
+      <%= formatRegistrationInfo("link") %>
+        <% if (typeof( RegistrationInfo.RegisterUri ) !== "undefined" && RegistrationInfo.RegisterUri !== "") { %> or <a href="<%- ViewUri %>" target="_blank">read more</a>
+          <% } %>
+    </div>
+  </div>
+</script>
+
+<!-- Dependencies -->
+<script type="text/javascript" src="//packages.arlocdn.net/jscontrols/1.0/resources/resizesensor.js" charset="utf-8"></script>
+<script type="text/javascript" src="//packages.arlocdn.net/jscontrols/1.0/resources/elementqueries.js" charset="utf-8"></script>
+<script type="text/javascript" src="//connect.arlocdn.net/jscontrols/1.1/init.js" charset="utf-8" defer="defer"></script>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
