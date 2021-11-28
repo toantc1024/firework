@@ -13,12 +13,10 @@ html, body {
   position: relative; */
 }
 .container {
-  border-top: solid #ffe392;
-  border-bottom: solid #ffe392;
   visibility: hidden;
   margin: 0 auto;
   overflow: hidden;
-  background: #b8850f00;
+  background: #0fb8ad;
 /*     background: radial-gradient(circle, transparent, rgba(0, 0, 0, 0.3), rgba(14, 135, 113, 0.9)), rgb(15, 184, 173); */
   background-size: cover;
   background-position: center;

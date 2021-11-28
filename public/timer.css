@@ -312,3 +312,10 @@ h1 {
 .made-with-love a:hover {
   text-decoration: underline;
 }
+hr{
+  border: 2px solid #ffe392;
+  border-radius: 5px;
+  background-color: #ffe392;
+  width:50%;
+  text-align: center;
+}

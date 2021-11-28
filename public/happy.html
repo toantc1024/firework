@@ -10,8 +10,17 @@
 <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'></head>
 <body>
+  <style>
+    hr{
+      border: 2px solid #ffe392;
+      border-radius: 5px;
+      background-color: #ffe392;
+      width:50%;
+      text-align: center;
+    }
+  </style>
 <!-- partial:index.partial.html -->
-<h1  style="	font-weight:700;font-family: 'Lato', Helvetica, Arial, 'ヒラギノ角ゴシック体 GB W6', Hiragino Sans GB W6, 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif; font-size:5vh; color:rgb(255, 218, 137)">
+<h1  style="	font-weight: 700;font-family: 'Lato', Helvetica, Arial, 'ヒラギノ角ゴシック体 GB W6', Hiragino Sans GB W6, 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif; font-size:5vh; color:rgb(255, 218, 137)">
   GIAO THỪA 2022 
   <hr><p  id="demo" style="font-family: 'Lato', Helvetica, Arial, 'ヒラギノ角ゴシック体 GB W6', Hiragino Sans GB W6, 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif; font-size:3.05vh; color:#ffffffef"></p>
 </h1>
@@ -47,10 +56,8 @@ h2 {
 
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date("Feb 1, 2022 0:00:00").getTime();
-//var countDownDate = new Date("Feb 1, 2022 00:00:00").getTime();
+var countDownDate = new Date("Nov 27, 2021 11:06:00").getTime();
 localStorage.setItem("TIME_TO_STOP",false);      document.getElementById("demo").innerHTML = "NĂM MỚI BÌNH AN, SUNG TÚC, THÀNH CÔNG";  
-
 // Update the count down every 1 second
 var x = setInterval(function() {
   // Get today's date and time
@@ -68,11 +75,7 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
  // console.log(seconds);
   // Output the result in an element with id="demo"
-
   if(distance<30000){
-    if(seconds<30&&seconds>10){
-      responsiveVoice.speak("", "UK English Male"); 
-    }
     if(seconds<11){
       var log = ["Happy Lunar New Year 🎉🥳", "Một 😊","Hai 😎","Ba 🙄","Bốn 🤣", "Năm 🌸", "Sáu 🧧", "Bảy 🍀", "Tám 💬","Chín 👍","Mười 👋"];
       var log2 = ["Happy Lunar New Year", "One","Two","Three","Four", "Five", "Six", "Seven", "Eight","Nine","Ten"];
@@ -120,35 +123,24 @@ var x = setInterval(function() {
 <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="4f8209ce-920e-4dd8-a463-ce8b87a5defc";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 </html>
 
-<div  class="cube-wrapper">
+<div class="cube-wrapper">
   <div class="cube-folding">
     <span class="leaf1"></span>
     <span class="leaf2"></span>
     <span class="leaf3"></span>
     <span class="leaf4"></span>
   </div>
-  <span style="font-family: 'Lato', Helvetica, Arial, 'ヒラギノ角ゴシック体 GB W6', Hiragino Sans GB W6, 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif; font-size: 1.85vh;  background-color:rgb(58, 182, 0); border: solid 0.25px rgb(66, 66, 66);border-radius: .467rem; background-size: 13px 13px; background-image: linear-gradient(to right, rgb(66, 66, 66) 1.5px, transparent 1.5px), linear-gradient(to bottom, rgb(66, 66, 66) 1.5px, transparent 1.5px);z-index:9999999; " class="loading" data-name="Loading">Tài trợ bởi tập thể 12A1</span>
+  <span style="font-family: 'Lato', Helvetica, Arial, 'ヒラギノ角ゴシック体 GB W6', Hiragino Sans GB W6, 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif; font-size: 1.85vh;" class="loading" data-name="Loading">Tài trợ bởi tập thể 12A1</span>
 </div>
 
 <!-- follow me template -->
-<div class="made-with-love" style="position: relative;bottom: 20px;">
- 
+<div class="made-with-love">
   Hoàn thành với tất cả tình yêu
   <i>💛</i> bởi
   <a target="_blank" href="https://codepen.io/nikhil8krishnan">Nikhil Krishnan & DonGhelix2004</a>
 </div>
 <!-- partial -->
+<div class="powr-music-player" id="f1bdac38_1637992976"></div><script src="https://www.powr.io/powr.js?platform=html"></script>
 </body>
-</html><style>
-  
-  .responsive-iframe {
-    z-index: -999999999999999;
-     max-width: 100%;
-    min-width: 130vw;
-    min-height: 300vw;
-  }
-  </style>
-  
-<div class="container"> 
-  <iframe class="responsive-iframe" src="./flower/index.html"></iframe>
-</div>
+
+</html>

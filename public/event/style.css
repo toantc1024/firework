@@ -72,6 +72,14 @@ button {
   width: 3vw;
   vertical-align: middle;
 }
+
+hr{
+	border: 2px solid #ffe392;
+	border-radius: 5px;
+	background-color: #ffe392;
+	width:50%;
+	text-align: center;
+  }
 .meetbtn {
   text-decoration: none;
   font-weight: 700;
