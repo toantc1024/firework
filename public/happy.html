@@ -53,10 +53,14 @@ h2 {
 </style>
 </head>
 <body>
-
+<div class="made-with-love">
+  Hoàn thành với tất cả tình yêu
+  <i>💛</i> bởi
+  <a target="_blank" href="https://codepen.io/nikhil8krishnan">Nikhil Krishnan & DonGhelix2004</a>
+</div>
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date("Nov 27, 2021 11:06:00").getTime();
+var countDownDate = new Date("Feb 1, 2022 00:00:00").getTime();
 localStorage.setItem("TIME_TO_STOP",false);      document.getElementById("demo").innerHTML = "NĂM MỚI BÌNH AN, SUNG TÚC, THÀNH CÔNG";  
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -130,17 +134,48 @@ var x = setInterval(function() {
     <span class="leaf3"></span>
     <span class="leaf4"></span>
   </div>
-  <span style="font-family: 'Lato', Helvetica, Arial, 'ヒラギノ角ゴシック体 GB W6', Hiragino Sans GB W6, 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif; font-size: 1.85vh;" class="loading" data-name="Loading">Tài trợ bởi tập thể 12A1</span>
+
+  <span style="font-family: 'Lato', Helvetica, Arial, 'ヒラギノ角ゴシック体 GB W6', Hiragino Sans GB W6, 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif; font-size: 1.85vh;  background-color:rgb(58, 182, 0); border: solid 0.25px rgb(66, 66, 66);border-radius: .467rem; background-size: 13px 13px; background-image: linear-gradient(to right, rgb(66, 66, 66) 1.5px, transparent 1.5px), linear-gradient(to bottom, rgb(66, 66, 66) 1.5px, transparent 1.5px);z-index:9999999; " class="loading" data-name="Loading">Tài trợ bởi tập thể 12A1</span>
 </div>
 
 <!-- follow me template -->
-<div class="made-with-love">
-  Hoàn thành với tất cả tình yêu
-  <i>💛</i> bởi
-  <a target="_blank" href="https://codepen.io/nikhil8krishnan">Nikhil Krishnan & DonGhelix2004</a>
-</div>
+
 <!-- partial -->
-<div class="powr-music-player" id="f1bdac38_1637992976"></div><script src="https://www.powr.io/powr.js?platform=html"></script>
 </body>
 
 </html>
+<style>
+  
+  .responsive-iframe {
+    z-index: -999999999999999;
+     max-width: 100%;
+    min-width: 130vw;
+    min-height: 300vw;
+  }
+  </style>
+  
+<div class="container"> 
+  <iframe id='flower-frame' class="responsive-iframe" src=""></iframe>
+</div>
+<script>
+  onload = function(){
+    if(localStorage.getItem('current-flower')===null){
+      localStorage.setItem('current-flower','./flower/index.html');
+      document.getElementById('flower-frame').src = "./flower/index.html";
+    } else {
+      document.getElementById('flower-frame').src = localStorage.getItem('current-flower');
+    }
+  }
+  function updateFlower(){
+    if(localStorage.getItem('current-flower')==='./flower/index.html'){
+        localStorage.setItem('current-flower','./flower/pink.html');
+        document.getElementById('flower-frame').src = './flower/pink.html';
+    } else if(localStorage.getItem('current-flower')==='./flower/pink.html'){
+      localStorage.setItem('current-flower','./flower/red.html');
+      document.getElementById('flower-frame').src = './flower/red.html';
+    } else {
+      localStorage.setItem('current-flower','./flower/index.html');
+      document.getElementById('flower-frame').src = './flower/index.html'
+    }
+  }
+</script>

@@ -295,7 +295,10 @@ const skyLightingSelector = () => +store.state.config.skyLighting;
 const scaleFactorSelector = () => store.state.config.scaleFactor;
 
 
+document.getElementById("hello").onclick = function(){
 
+
+}
 // Help Content
 const helpContent = {
 	shellType: {

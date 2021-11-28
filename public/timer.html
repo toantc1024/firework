@@ -47,7 +47,7 @@ h2 {
 
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date("Feb 1, 2022 0:00:00").getTime();
+var countDownDate = new Date("Feb 1, 2022 00:00:00").getTime();
 //var countDownDate = new Date("Feb 1, 2022 00:00:00").getTime();
 localStorage.setItem("TIME_TO_STOP",false);      document.getElementById("demo").innerHTML = "NĂM MỚI BÌNH AN, SUNG TÚC, THÀNH CÔNG";  
 
@@ -70,7 +70,7 @@ var x = setInterval(function() {
   // Output the result in an element with id="demo"
 
   if(distance<30000){
-    if(seconds<30&&seconds>10){
+    if(seconds<30&&seconds>25){
       responsiveVoice.speak("", "UK English Male"); 
     }
     if(seconds<11){
@@ -120,7 +120,7 @@ var x = setInterval(function() {
 <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="4f8209ce-920e-4dd8-a463-ce8b87a5defc";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 </html>
 
-<div  class="cube-wrapper">
+<div onclick="updateFlower()" class="cube-wrapper">
   <div class="cube-folding">
     <span class="leaf1"></span>
     <span class="leaf2"></span>
@@ -150,5 +150,27 @@ var x = setInterval(function() {
   </style>
   
 <div class="container"> 
-  <iframe class="responsive-iframe" src="./flower/index.html"></iframe>
+  <iframe id='flower-frame' class="responsive-iframe" src=""></iframe>
 </div>
+<script>
+  onload = function(){
+    if(localStorage.getItem('current-flower')===null){
+      localStorage.setItem('current-flower','./flower/index.html');
+      document.getElementById('flower-frame').src = "./flower/index.html";
+    } else {
+      document.getElementById('flower-frame').src = localStorage.getItem('current-flower');
+    }
+  }
+  function updateFlower(){
+    if(localStorage.getItem('current-flower')==='./flower/index.html'){
+        localStorage.setItem('current-flower','./flower/pink.html');
+        document.getElementById('flower-frame').src = './flower/pink.html';
+    } else if(localStorage.getItem('current-flower')==='./flower/pink.html'){
+      localStorage.setItem('current-flower','./flower/red.html');
+      document.getElementById('flower-frame').src = './flower/red.html';
+    } else {
+      localStorage.setItem('current-flower','./flower/index.html');
+      document.getElementById('flower-frame').src = './flower/index.html'
+    }
+  }
+</script>
