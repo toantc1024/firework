@@ -368,10 +368,10 @@ body {
 	z-index: 99999;
 	position: absolute;
 	left: 12px;
-	top: 12px;  box-sizing: border-box;
-	width: 40px;
-	height: 40px;
-  font-size:30px;
+	bottom: 168px;  box-sizing: border-box;
+  width: 30px;
+	height: 30px;
+  font-size:23px;
   text-align: center;        vertical-align: middle;
 
   box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
@@ -403,24 +403,22 @@ body {
       min-height: 87vh;
   }
   ::-webkit-scrollbar {
-	width: 8px;
+    width: 5px;
   }
   
-  /* Track */
-  ::-webkit-scrollbar-track {
-	box-shadow: outset 0 0 5px rgba(160, 160, 160, 0.336);
+  ::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 5px;
   }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {	background:  rgb(204, 204, 204);
-
-	border-radius: 0px;
+  
+  ::-webkit-scrollbar-track {
+    background: #ffbb00;
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-	background:  rgb(160, 160, 160);
-  } 
+    background: rgba(255, 255, 255, 0.81);; 
+  }
  .check_close{
    position: absolute;
    margin-top: 15%;
@@ -510,10 +508,10 @@ font-family: 'Noto Sans', sans-serif;
 	z-index: 99999;
 	position: absolute;
 	left: 12px;
-	top: 58px;  box-sizing: border-box;
-	width: 40px;
-	height: 40px;
-  font-size:30px;
+	bottom: 136px;  box-sizing: border-box;
+  width: 30px;
+	height: 30px;
+  font-size:23px;
   text-align: center;        vertical-align: middle;
 
   box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
@@ -553,10 +551,10 @@ font-family: 'Noto Sans', sans-serif;
 	z-index: 99999;
 	position: absolute;
 	left: 12px;
-	top: 104px;  box-sizing: border-box;
-	width: 40px;
-	height: 40px;
-  font-size:30px;
+	bottom: 104px;  box-sizing: border-box;
+  width: 30px;
+	height: 30px;
+  font-size:23px;
   text-align: center;        vertical-align: middle;
 
   box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
@@ -596,10 +594,10 @@ font-family: 'Noto Sans', sans-serif;
 	z-index: 99999;
 	position: absolute;
 	left: 12px;
-	top: 150px;  box-sizing: border-box;
-	width: 40px;
-	height: 40px;
-  font-size:30px;
+  bottom: 72px;  box-sizing: border-box;
+	width: 30px;
+	height: 30px;
+  font-size:23px;
   text-align: center;        vertical-align: middle;
 
   box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
@@ -639,10 +637,10 @@ font-family: 'Noto Sans', sans-serif;
 	z-index: 99999;
 	position: absolute;
 	left: 12px;
-	top: 196px;  box-sizing: border-box;
-	width: 40px;
-	height: 40px;
-  font-size:30px;
+  bottom: 40px;  box-sizing: border-box;
+	width: 30px;
+	height: 30px;
+  font-size:23px;
   text-align: center;        vertical-align: middle;
 
   box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);

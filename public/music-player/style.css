@@ -1,3 +1,6 @@
+html{
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Rubik", sans-serif;
   color: #390707;
@@ -17,8 +20,10 @@ body .card {
   justify-content: center;
   align-items: center;
   max-width: 371px;
+  min-width: 40vw;
+  min-height: 50vw;
   padding: 0 5px;
-  margin-top: 40px;
+  margin-top: 00px;
   border-radius: 20px;
   color: #fff;
   font-weight: 100;
@@ -50,7 +55,7 @@ body .card .current-song .img-wrap {
   box-shadow: 0px 10px 40px 0px rgba(211, 156, 39, 0.7);
 }
 body .card .current-song .img-wrap img {
-  width: auto;
+  width: 100%;
   height: 100%;
 }
 body .card .current-song .song-name {
@@ -58,7 +63,7 @@ body .card .current-song .song-name {
   font-size: 22px;
 }
 body .card .current-song .song-autor {
-  color: #709fdc;
+  color: #8f6200;
 }
 body .card .current-song .time {
   display: flex;
@@ -236,20 +241,6 @@ body .card .play-list .track .track-duration {
   font-weight: 500;
 }
 
-.fa-instagram {
-  position: absolute;
-  color: #071739;
-  top: 3%;
-  right: 2%;
-  font-size: 38px;
-}
-
-.fa-instagram:hover {
-  font-size: 42px;
-  color: #fff;
-  transition: all 0.1s linear;
-  cursor: pointer;
-}
 
 .play-list::-webkit-scrollbar {
   width: 5px;
@@ -264,6 +255,21 @@ body .card .play-list .track .track-duration {
   background: #d49100da;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffbb00;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.81);; 
+}
 @-webkit-keyframes play {
   0% {
     transform: rotate(0deg);

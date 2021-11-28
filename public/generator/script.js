@@ -10,7 +10,6 @@ var phraseChinese4 = document.getElementById("phraseChinese4");
 
 var phraseEnglish = document.getElementById("phraseEnglish");
 
-var button = document.getElementById("button");
 var random = Math.random();
 
 // Arrays for pinyin and Chinese characters
@@ -105,14 +104,14 @@ var phrasesC4 = [
 // English phrases
 // Translations taken from here: http://www.travelsintranslation.com/2014/01/cantonese-chinese-new-year-phrases/
 var phrasesE = [
-	"(Happy new year)",
-	"(Congratulations on your prosperity)",
-	"(Great luck and prosperity)",
-	"(May 10,000 things go according to your wishes)",
-	"(Every year have more than you need)",
-	"(Wishing you good health)",
-	"(May all your heart's desires come true)",
-	"(Congratulations in the new year)"
+	"Happy new year<br/>Chúc mừng năm mới",
+	"Congratulations on your prosperity",
+	"Great luck and prosperity",
+	"May 10,000 things go according to your wishes",
+	"Every year have more than you need",
+	"Wishing you good health",
+	"May all your heart's desires come true",
+	"Congratulations in the new year"
 ];
 
 // Sets text content as random phrase from arrays
@@ -124,7 +123,7 @@ phraseChinese1.textContent = phrasesC1[Math.floor(random * phrasesC1.length)];
 phraseChinese2.textContent = phrasesC2[Math.floor(random * phrasesC2.length)];
 phraseChinese3.textContent = phrasesC3[Math.floor(random * phrasesC3.length)];
 phraseChinese4.textContent = phrasesC4[Math.floor(random * phrasesC4.length)];
-phraseEnglish.textContent = phrasesE[Math.floor(random * phrasesE.length)];
+phraseEnglish.innerHTML = phrasesE[Math.floor(random * phrasesE.length)];
 
 var onClick = function() {
 	var random = Math.random();
@@ -137,8 +136,8 @@ var onClick = function() {
 	phraseChinese2.textContent = phrasesC2[Math.floor(random * phrasesC2.length)];
 	phraseChinese3.textContent = phrasesC3[Math.floor(random * phrasesC3.length)];
 	phraseChinese4.textContent = phrasesC4[Math.floor(random * phrasesC4.length)];
-	phraseEnglish.textContent = phrasesE[Math.floor(random * phrasesE.length)];
+	phraseEnglish.innerHTML = phrasesE[Math.floor(random * phrasesE.length)];
 }
 
 // Sets text content as random phrase when button is clicked
-button.addEventListener("click", onClick);
+document.addEventListener("click", onClick);

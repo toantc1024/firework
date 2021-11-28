@@ -207,7 +207,6 @@
   color: white;
   position: relative;
   top: 25px;
-  z-index: 2;
   -webkit-animation: text 0.5s ease infinite alternate;
   -moz-animation: text 0.5s ease infinite alternate;
   animation: text 0.5s ease infinite alternate;

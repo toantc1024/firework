@@ -613,7 +613,6 @@ const ghostShell = (size=1) => {
 	// We don't want glitter to be spewed by invisible stars, and we don't currently
 	// have a way to transition glitter state. So we'll disable it.
 	shell.glitter = '';
-	
 	return shell;
 };
 
