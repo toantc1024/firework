@@ -386,7 +386,7 @@
           var s = o[n];
           t.lineTo(s.x, s.y)
         }
-        t.fillStyle = e || "#ff0000", t.fill()
+        t.fillStyle = e || "#ff 0000", t.fill()
       }, e.chamfer = 10, e
     }(m),
     g = this && this.__extends || function(t, e) {
@@ -397,7 +397,7 @@
       t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype, new n)
     },
     b = {};
-    ~["eee4da", "ede0c8", "f2b179", "f59563", "", "f65e3b", "edcf72", "edcc61", "edc850", "edc53f", "edc22e"].forEach(function(t, e) {
+    ~["eee4da", "ede0c8", "f2b179", "f59563", "#ff7a4a", "f65e3b", "edcf72", "edcc61", "edc850", "edc53f", "edc22e"].forEach(function(t, e) {
       b[Math.pow(2, e + 1)] = "#" + t
   });
   var E = function(e) {

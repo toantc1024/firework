@@ -32,11 +32,8 @@
       <span id="gift" class="close">🎊</span>  
 	  <span id="music" class="music">🎵</span> 
 	  <span id="generate" class="generate">🧧</span> 
-	  <span id="game" class="game">🚀</span>
-	  <span id="meet" class="meet">🎉</span>  
-	  <div id="modal-reset" class="check">
-     
-      
+	  <span id="game" class="game">🚀</span>   
+	  <span id="meet" class="meet">🎉</span>    
 		<iframe  id="itimer" width=100% class="app-iframe" src="./timer.html"></iframe>
         <iframe  id="imusic" width=100% class="app-iframe" src="./music-player/index.html" style="display:none"></iframe>
 		<iframe  id="igenerate"></iframe>
@@ -89,7 +86,7 @@ document.getElementById("game").onclick = function(){
 		document.getElementById("itimer").style.display = "block";
 }
 document.getElementById("meet").onclick = function(){
-	document.getElementById("itimer").src = "./features/ionic/index.html";//url
+	document.getElementById("itimer").src = "./events/index.html";//url
 		document.getElementById("imusic").style.display = "none";
 		document.getElementById("itimer").style.display = "block";
 }

@@ -20,8 +20,8 @@ body .card {
   justify-content: center;
   align-items: center;
   max-width: 371px;
-  min-width: 40vw;
-  min-height: 50vw;
+  min-width:40vw;
+  min-height: 60vw;
   padding: 0 5px;
   margin-top: 00px;
   border-radius: 20px;
