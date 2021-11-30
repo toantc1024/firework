@@ -28,7 +28,7 @@ body{
   max-height: 120px;
 }
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 9.5px;
 }
 hr{
   color:rgba(255, 255, 255, 0.637);
@@ -67,8 +67,8 @@ hr{
     background-size: 80px;
 }
 
-@media(max-width: 990px){
+@media(max-width: 500vw){
   .card{
-    margin: 20px;
+    margin: 8px;
   }
 }

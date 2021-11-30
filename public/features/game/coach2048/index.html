@@ -10,19 +10,127 @@
 <!-- partial:index.partial.html -->
 <div id=container><canvas id=backcanvas></canvas><canvas id=canvas></canvas>
     <div id=load>
-      <h1>Loading</h1></div>
+      <h1>Đang tải</h1></div>
     <div id=home>
-      <h1>Lazy 2048</h1>
-      <p><b>How to play:</b><br>⭐️ Drag pieces around<br>⭐️ Stack those with the same number<br>⭐️ Get to 2048 to win the game<br>⭐️ Or Sit simply<small>(recommended for highly lazy ones)</small></p>
-      <div id=start>NEW GAME</div>
-      <div id=menu><input type=checkbox class=opt id=m checked=checked><label for=m>Music</label><br><input type=checkbox class=opt id=s checked=checked><label for=s>Sound FX</label><br><input type=checkbox class=opt id=q checked=checked><label for=q>High Quality</label></div>
+      <h1>Ghế Cozy 2048</h1>
+      <p><b>Cách chơi:</b><br>⭐️ Kéo vả thả viên tròn<br>⭐️ Hợp nhất những cặp viên cùng số<br>⭐️ Đạt số 2048 để chiến thắng<br>⭐️ Hoặc chỉ đơn giản là chơi thôi<small></small></p>
+      <div id=start>BẮT ĐẦU</div>
+      <div id=menu><input type=checkbox class=opt id=m checked=checked><label for=m>Âm thanh</label><br><input type=checkbox class=opt id=s checked=checked><label for=s>Hiệu ứng âm thanh FX</label><br><input type=checkbox class=opt id=q checked=checked><label for=q>Ảnh đẹp</label></div>
     </div>
     <div id=end style=display:none>
-      <h1>You win</h1>
-      <p><b>Let's party!</b><br><small>Success is commemorated; failure merely remembered</small><br>Written for js13kGames–2016</p>
-      <div id=reset>PLAY AGAIN</div>
+      <h1>Chúc mừng! Bạn đã thắng.</h1>
+      <p><b>Tiệc tùng đi!</b><br><small>Success is commemorated which merely remembered</small><br>Written for js13kGames–2016</p>
+      <div id=reset>CHƠI LẠI</div>
     </div>
   </div>
+  
+  <style>
+  
+  
+    a {
+      background: rgb(255, 255, 255);
+      text-decoration: none;
+      color: #90d1ce;
+      outline: none;
+    }
+    
+    a:hover,
+    a:focus {
+      color: #77bbb5;
+      outline: none;
+    }
+    
+    
+    /* Top Navigation Style */
+    
+    .meta {
+      font-size: 0.75em;
+      line-height: 1;
+      position: absolute;
+      top: 1em;
+      left: 1em;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+      flex-wrap: wrap;
+      white-space: nowrap;
+      border-top: 1px solid #90c4d1;
+    }
+    
+    .meta::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1px;
+      height: 100%;
+      background: #90bfd1;
+    }
+    
+    .meta a {
+      display: block;
+      padding: 1em 1.35em;
+      border: 1px solid #90c4d1;
+      border-top: 0;
+    }
+    
+    .meta a:not(:last-child) {
+      border-right: 0;
+    }
+    
+    .codrops-icon {
+      width: 4em;
+    }
+    
+    .codrops-icon span {
+      display: none;
+    }
+    
+    .codrops-icon::before {
+      font-family: 'codropsicons';
+      font-size: 1.15em;
+      font-weight: normal;
+      font-style: normal;
+      font-variant: normal;
+      line-height: 1;
+      text-transform: none;
+      speak: none;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    .codrops-icon--drop::before {
+      content: '\e001';
+      color: #09c;
+    }
+    
+    .codrops-icon--prev::before {
+      content: '\e004';
+    }
+    
+       </style>
+             <nav class="meta">
+            <a  class="codrops-icon" style=" text-align: center; z-index: 9999999999" id="fullscr"><i class="fas fa-expand"></i></a>	
+        </nav>
+          <script>
+          
+        
+    let fullscreen;
+    let fsEnter = document.getElementById('fullscr');
+    fsEnter.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (!fullscreen) {
+            fullscreen = true;
+            document.documentElement.requestFullscreen();
+            fsEnter.innerHTML = "<i class='fas fa-compress'></i>";
+        }
+        else {
+            fullscreen = false;
+            document.exitFullscreen();
+            fsEnter.innerHTML = "<i class='fas fa-expand'></i>";
+        }
+    });
+          </script>
+              <script type="text/javascript" src="../aviator/js/font@awesome.js"></script>
 <!-- partial -->
   <script  src="./script.js"></script>
 

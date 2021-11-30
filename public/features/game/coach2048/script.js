@@ -153,7 +153,7 @@
   }
 
   function n() {
-    A.clearRect(0, 0, T, S), A.save(), A.shadowColor = "rgba(0,0,0,0.4)", A.shadowBlur = 25, P.paint(A, "#0091EA"), A.shadowColor = "#000", A.translate(0, 1), at.paint(A, "rgba(55,71,79,0.4)"), ct.paint(A, "rgba(55,71,79,0.4)"), ft.paint(A, "rgba(55,71,79,0.4)"), A.restore()
+    A.clearRect(0, 0, T, S), A.save(), A.shadowColor = "rgba(0,0,0,0.4)", A.shadowBlur = 25, P.paint(A, "#ea0000"), A.shadowColor = "#000", A.translate(0, 1), at.paint(A, "rgba(255, 196, 0, 0.767)"), ct.paint(A, "rgba(55,71,79,0.4)"), ft.paint(A, "rgba(79, 55, 55, 0.4)"), A.restore()
   }
 
   function o(t, e, n) {
@@ -379,14 +379,14 @@
           o = this.positions[1];
         t.moveTo(.5 * (n.x + o.x), .5 * (n.y + o.y));
         for (var s = 1; s <= 6; ++s) 4 != s && 5 != s ? (n = this.positions[s % 6], o = this.positions[(s + 1) % 6], t.quadraticCurveTo(n.x, n.y, .5 * (n.x + o.x), .5 * (n.y + o.y))) : t.lineTo(this.positions[s].x, this.positions[s].y);
-        t.fillStyle = e || "#00B0FF", t.fill()
+        t.fillStyle = e || "#ff0000", t.fill()
       }, e.prototype.paintLow = function(t, e) {
         t.beginPath();
         for (var n = 0, o = this.positions; n < o.length; n++) {
           var s = o[n];
           t.lineTo(s.x, s.y)
         }
-        t.fillStyle = e || "#00B0FF", t.fill()
+        t.fillStyle = e || "#ff0000", t.fill()
       }, e.chamfer = 10, e
     }(m),
     g = this && this.__extends || function(t, e) {
@@ -397,8 +397,8 @@
       t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype, new n)
     },
     b = {};
-  ~["eee4da", "ede0c8", "f2b179", "f59563", "f67c5f", "f65e3b", "edcf72", "edcc61", "edc850", "edc53f", "edc22e"].forEach(function(t, e) {
-    b[Math.pow(2, e + 1)] = "#" + t
+    ~["eee4da", "ede0c8", "f2b179", "f59563", "", "f65e3b", "edcf72", "edcc61", "edc850", "edc53f", "edc22e"].forEach(function(t, e) {
+      b[Math.pow(2, e + 1)] = "#" + t
   });
   var E = function(e) {
       function n(n, o, s, i) {

@@ -14,7 +14,7 @@
 
 body,
 html {
-  background: #263238;
+  background: #1c251c;
   height: 100%;
   margin: 0;
   overflow: hidden;
@@ -48,7 +48,7 @@ label {
 }
 
 #backcanvas {
-  background: #455A64
+  background: #ffbb00
 }
 
 #end,
