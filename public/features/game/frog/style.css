@@ -1,4 +1,4 @@
-@keyframes squiggly {
+  @keyframes squiggly {
   0% {
     filter: url("#squiggly-0");
   }
@@ -384,7 +384,7 @@ body.dark {
   transform-origin: 50% 100%;
 }
 .light .tree {
-  background: #6f4817;
+  background: #d70000;
 }
 .dark .tree {
   background: #0a0a2a;
@@ -405,7 +405,7 @@ body.dark {
   content: "";
 }
 .light .tree:before, .light .tree:after {
-  border-bottom-color: #2d5e3b;
+  border-bottom-color: #ff9100;
 }
 .dark .tree:before, .dark .tree:after {
   border-bottom-color: #0a0a2a;
@@ -442,7 +442,7 @@ body.dark {
   border-radius: 50% 50% 0 0/100% 100% 0 0;
 }
 .light .lily {
-  background: #777;
+  background: rgb(119, 119, 119);
 }
 .dark .lily {
   background: #223;
@@ -953,7 +953,7 @@ body.dark {
   z-index: 8;
   bottom: 0.5em;
   left: 50%;
-  width: 4em;
+  width: 3.25em;
   height: 0;
   margin-left: -2em;
   overflow: hidden;

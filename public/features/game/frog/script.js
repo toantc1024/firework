@@ -97,11 +97,11 @@ function toggleMusic() {
   musicPlaying = !musicPlaying;
   if (musicPlaying) {
     music.play();  
-    musicButton.textContent = "Stop Music";
+    musicButton.textContent = "Tắt nhạc";
   } else {
     music.pause();
     music.currentTime = 0;
-    musicButton.textContent = "Play Music";
+    musicButton.textContent = "Bật nhạc";
   }
   
 }
