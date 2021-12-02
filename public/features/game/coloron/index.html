@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - COLORON GAME: inspiring developers to use SVG Animations, ES6 and Flexbox</title>
+  <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>COLORON GAME: inspiring developers to use SVG Animations, ES6 and Flexbox</title>
+<meta name="description" content="A game made to inspire developers to use GSAP, ES6 and Flexbox">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+<meta name="apple-mobile-web-app-capable" content="yes"> 
+
+<link rel="apple-touch-icon" href="https://greghub.github.io/coloron/public/images/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://greghub.github.io/coloron/public/images/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://greghub.github.io/coloron/public/images/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://greghub.github.io/coloron/public/images/touch-icon-ipad-retina.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@CodePen">
+<meta name="twitter:title" content="COLORON GAME: inspiring developers to use SVG Animations, ES6 and Flexbox">
+<meta name="twitter:description" content="A game made to inspire developers to use GSAP, ES6 and Flexbox">
+<meta name="twitter:creator" content="@greghvns">
+<meta name="twitter:image" content="https://greghub.github.io/coloron/public/images/coloron-image.png">
+
+<meta property="og:image" content="https://greghub.github.io/coloron/public/images/coloron-image.png">
+<meta property="og:title" content="COLORON GAME: inspiring developers to use SVG Animations, ES6 and Flexbox">
+<meta property="og:url" content="https://codepen.io/gregh/pen/yVLOyO">
+<meta property="og:site_name" content="CodePen">
+<meta property="og:description" content="A game made to inspire developers to use GSAP, ES6 and Flexbox"><link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,700,900'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!--
+design by https://www.behance.net/vahanhovh
+-->
+<div class="splash"></div>
+<div class="container">
+
+            <div class="start-game game-full-flex" id="start-game">
+                
+                <div class="start-game-top"><a class="play-full-page" href="https://codepen.io/gregh/full/yVLOyO/"  target="_blank">Full Page Mode</a></div>    
+
+                <div class="logo-holder">
+                    <p class="logo">
+                        <span>C</span>
+                        <span>o</span>
+                        <span>l</span>
+                        <span>o</span>
+                        <span>r</span>
+                        <span>o</span>
+                        <span>n</span>
+                    </p>
+                    <a class="play-button" href="#" onclick="game.start()">Chơi</a>
+                    <h4 class="hint">Gợi ý: <span>màu đỏ</span> luôn luôn xuất hiện trước</h4>
+                </div>
+
+                <div class="how-to-play">
+                    <div class="section section-1">
+                        <h4>Khi quả bóng nảy<br>thì màu bị thay đổi</h4>
+                        <div class="content">
+                            <div class="ball-demo" id="ball-demo"></div>
+                        </div>
+                    </div>
+                    <div class="section section-2">
+                        <h4>Nhấp vào các thanh để đổi màu<br>(Đỏ, Vàng, Tím)</h4>
+                        <div class="content">
+                            <div class="bar bar-1" data-index="0"></div>
+                            <div class="bar bar-2"></div>
+                            <div class="bar bar-3"></div>
+                        </div>
+                    </div>
+                    <div class="section section-3">
+                        <h4>Màu của thanh và bóng<br>phải luôn giống nhau</h4>
+                        <div class="content">
+                            <div class="ball-demo" id="ball-demo"></div>
+                            <div class="bar bar-1"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="stop-game game-full-flex">
+
+                <div class="score-container">
+
+                    <h1>Coloron</h1>
+
+                    <div class="final-score"></div>
+                    <div class="result"></div>
+
+
+                    <div>
+                        <a class="play-again" href="#" onclick="game.start()">Chơi lại</a>
+                        <a class="main-menu" href="#" onclick="game.intro()">Màn hình chính</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="small-glows"></div>
+
+            <div class="glow"><div class="sun"></div></div>
+
+            <div class="waves">
+                <div class="top_wave"></div>
+                <div class="wave1"></div>
+                <div class="wave2"></div>
+                <div class="wave3"></div>
+                <div class="wave4"></div>
+            </div>
+
+            <div class="mounts">
+                <div class="mount1"></div>
+                <div class="mount2"></div>
+            </div>
+
+            <div class="clouds"></div>
+
+            <div class="scene">
+                <div class="learn-to-play">Bấm vào các thanh để đổi màu!</div>
+                <div class="score" id="score"></div>
+                <div class="ball-holder"></div>
+                <div class="sticks" id="sticks"></div>
+            </div>
+
+            <div class="noise"></div>
+            <style>
+  
+  
+                a {
+                  background: rgb(255, 255, 255);
+                  text-decoration: none;
+                  color: #90d1ce;
+                  outline: none;
+                }
+                
+                a:hover,
+                a:focus {
+                  color: #77bbb5;
+                  outline: none;
+                }
+                
+                
+                /* Top Navigation Style */
+                
+                .meta {
+                  font-size: 0.75em;
+                  line-height: 1;
+                  position: absolute;
+                  bottom: 1em;
+                  left: 1em;
+                  display: -webkit-flex;
+                  display: flex;
+                  -webkit-flex-wrap: wrap;
+                  flex-wrap: wrap;
+                  white-space: nowrap;
+                  border-top: 1px solid #90c4d1;
+                }
+                
+                .meta::after {
+                  content: '';
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  width: 1px;
+                  height: 100%;
+                  background: #90bfd1;
+                }
+                
+                .meta a {
+                  display: block;
+                  padding: 1em 1.35em;
+                  border: 1px solid #90c4d1;
+                  border-top: 0;
+                }
+                
+                .meta a:not(:last-child) {
+                  border-right: 0;
+                }
+                
+                .codrops-icon {
+                  width: 4em;
+                }
+                
+                .codrops-icon span {
+                  display: none;
+                }
+                
+                .codrops-icon::before {
+                  font-family: 'codropsicons';
+                  font-size: 1.15em;
+                  font-weight: normal;
+                  font-style: normal;
+                  font-variant: normal;
+                  line-height: 1;
+                  text-transform: none;
+                  speak: none;
+                  -webkit-font-smoothing: antialiased;
+                }
+                
+                .codrops-icon--drop::before {
+                  content: '\e001';
+                  color: #09c;
+                }
+                
+                .codrops-icon--prev::before {
+                  content: '\e004';
+                }
+                
+                   </style>
+                         <nav class="meta">
+                        <a  class="codrops-icon" style=" text-align: center; z-index: 9999999999" id="fullscr"><i class="fas fa-expand"></i></a>	
+                    </nav>
+                      <script>
+                      
+                    
+                let fullscreen;
+                let fsEnter = document.getElementById('fullscr');
+                fsEnter.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    if (!fullscreen) {
+                        fullscreen = true;
+                        document.documentElement.requestFullscreen();
+                        fsEnter.innerHTML = "<i class='fas fa-compress'></i>";
+                    }
+                    else {
+                        fullscreen = false;
+                        document.exitFullscreen();
+                        fsEnter.innerHTML = "<i class='fas fa-expand'></i>";
+                    }
+                });
+                      </script>
+                          <script type="text/javascript" src="../aviator/js/font@awesome.js"></script>
+            <!-- partial -->
+        </div>
+<!-- partial -->
+  <script src='https://code.jquery.com/jquery-3.1.1.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
