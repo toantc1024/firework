@@ -1,3 +1,27 @@
+var xmlHttp;
+
+function srvTime() {
+   try {
+      //FF, Opera, Safari, Chrome
+      xmlHttp = new XMLHttpRequest();
+   } catch (err1) {
+      //IE
+      try {
+         xmlHttp = new ActiveXObject('Msxml2.XMLHTTP');
+      } catch (err2) {
+         try {
+            xmlHttp = new ActiveXObject('Microsoft.XMLHTTP');
+         } catch (eerr3) {
+            //AJAX not supported, use CPU time.
+            console.log("AJAX not supported");
+         }
+      }
+   }
+   xmlHttp.open('HEAD', window.location.href.toString(), false);
+   xmlHttp.setRequestHeader("Content-Type", "text/html");
+   xmlHttp.send('');
+   return xmlHttp.getResponseHeader("Date");
+}
 // Set the date we're counting down to
 document.getElementById("itimer").src = "./timer.html";
 var countDownDate = new Date("Feb 1, 2022 00:00:00").getTime();
@@ -8,7 +32,7 @@ var x = setInterval(function() {
   // Get today's date and time
 
 
-     var now = new Date().getTime();
+     var now = new Date(srvTime());
    // console.log(data.datetime);
    //  console.log(now);
   // Find the distance between now and the count down date
@@ -20,10 +44,10 @@ var x = setInterval(function() {
     clearInterval(x);	
     var y = setInterval(function() {
         // Get today's date and time
-           var nowy = new Date().getTime();
+           var nowy = new Date(srvTime());
          // console.log(data.datetime);
          //  console.log(now);
-         console.log(nowy);
+         //console.log(nowy);
   
 store.state.config.autoLaunch = true;
         // Find the distance between now and the count down date
@@ -34,7 +58,7 @@ store.state.config.autoLaunch = true;
         }
         //console.log(extra_w);
         var distancey = countDownDate+extra_w - nowy;
-        console.log(distancey);
+        //console.log(distancey);
         // Time calculations for days, hours, minutes and seconds
         var minutes = Math.floor((distancey % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distancey % (1000 * 60)) / 1000);

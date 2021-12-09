@@ -1,3 +1,4 @@
+<div id ="container123">
 <!DOCTYPE html>
 <html lang="en" >
 <head>
@@ -5,15 +6,13 @@
   <title>CodePen - Lunar/Chinese New Year Phrase Generator</title>
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 </head>
-<body>
+<body onload="check()">	
 <!-- partial:index.partial.html -->
 <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'></head>
-	<body onload="check()">
-	
-		<!-- Table for aligning pinyin and Chinese characters -->
-		
+
 		<table>
 			<tr>
 				<th class="pinyin" id="pinyin1">xīn</th>
@@ -30,7 +29,10 @@
 		</table>
 		<hr>
 		<h2 id="phraseEnglish" style="background:rgba(255, 255, 255, 0.226); padding:0px 10px; border-radius: 0.88rem">Happy new year</h2>
-<style>
+
+		<!-- Table for aligning pinyin and Chinese characters -->
+		
+	<style>
 	.cointainer{
 		position: absolute;
 		height:100%;
@@ -278,3 +280,5 @@
 
 </body>
 </html>
+
+</div>

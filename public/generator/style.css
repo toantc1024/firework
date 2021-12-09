@@ -1,12 +1,12 @@
-body {
-	border-radius: 0.88rem;
-	border:solid #ffbb00;
-	border-width: 0.888vw;
-	box-shadow: 6px 6px 20px rgba(224, 138, 0, 0.555);
-	background: linear-gradient(to left,  #ff1616, #fd1c1c);
-	color: #ffe392;
+html {
+
 	font-family: "Lato", Helvetica, Arial, "ヒラギノ角ゴシック体 GB W6", Hiragino Sans GB W6, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 	text-align: center;
+        border-radius: 0.88rem;
+	border:solid #ffbb00;
+	border-width: 0vw;
+	background: linear-gradient(to left,  #ff1616, #fd1c1c);
+	color: #ffe392;
 }
 
 table {

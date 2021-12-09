@@ -5,6 +5,10 @@
   <title>CodePen - Cube Flipping Loader</title>
   <link rel="stylesheet" href="./cdn/reset.min.css">
 <link rel="stylesheet" href="./timer.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com"><meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
@@ -46,17 +50,41 @@ h2 {
 <body>
 
 <script>
+  var xmlHttp;
+
+function srvTime() {
+   try {
+      //FF, Opera, Safari, Chrome
+      xmlHttp = new XMLHttpRequest();
+   } catch (err1) {
+      //IE
+      try {
+         xmlHttp = new ActiveXObject('Msxml2.XMLHTTP');
+      } catch (err2) {
+         try {
+            xmlHttp = new ActiveXObject('Microsoft.XMLHTTP');
+         } catch (eerr3) {
+            //AJAX not supported, use CPU time.
+            console.logs("AJAX not supported");
+         }
+      }
+   }
+   xmlHttp.open('HEAD', window.location.href.toString(), false);
+   xmlHttp.setRequestHeader("Content-Type", "text/html");
+   xmlHttp.send('');
+   return xmlHttp.getResponseHeader("Date");
+}
 // Set the date we're counting down to  
 var countDownDate = new Date("Feb 1, 2022 00:00:00").getTime();
 //var countDownDate = new Date("Feb 1, 2022 00:00:00").getTime();
-localStorage.setItem("TIME_TO_STOP",false);      document.getElementById("demo").innerHTML = "NĂM MỚI BÌNH AN, SUNG TÚC, THÀNH CÔNG";  
+localStorage.setItem("TIME_TO_STOP",false);      document.getElementById("demo").innerHTML = "NĂM MỚI BÌNH AN, SUNG TÚC, THÀNH CÔNG!";  
 
 // Update the count down every 1 second
 var x = setInterval(function() {
   // Get today's date and time
   responsiveVoice.enableWindowClickHook();
 
-     var now = new Date().getTime();
+     var now = new Date(srvTime());
    // console.log(data.datetime);
     // console.log(now);
   // Find the distance between now and the count down date
@@ -68,7 +96,7 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
  // console.log(seconds);
   // Output the result in an element with id="demo"
-
+//console.log(now.getDate());
   if(distance<30000){
     if(seconds<30&&seconds>25){
       responsiveVoice.speak("", "UK English Male"); 
@@ -127,7 +155,7 @@ var x = setInterval(function() {
     <span class="leaf3"></span>
     <span class="leaf4"></span>
   </div>
-  <span style="font-family: 'Lato', Helvetica, Arial, 'ヒラギノ角ゴシック体 GB W6', Hiragino Sans GB W6, 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif; font-size: 1.85vh;  background-color:rgb(58, 182, 0); border: solid 0.25px rgb(66, 66, 66);border-radius: .467rem; background-size: 13px 13px; background-image: linear-gradient(to right, rgb(66, 66, 66) 1.5px, transparent 1.5px), linear-gradient(to bottom, rgb(66, 66, 66) 1.5px, transparent 1.5px);z-index:9999999; " class="loading" data-name="Loading">Tài trợ bởi tập thể 12A1</span>
+  <span style="font-family: 'Roboto', sans-serif;  background-color:rgb(58, 182, 0); border: solid 0.25px rgb(66, 66, 66);border-radius: .467rem; background-size: 13px 13px; background-image: linear-gradient(to right, rgb(66, 66, 66) 1.5px, transparent 1.5px), linear-gradient(to bottom, rgb(66, 66, 66) 1.5px, transparent 1.5px);z-index:9999999; " class="loading" data-name="Loading">TÀI TRỢ BỞI TẬP THỂ 12A1</span>
 </div>
 
 <!-- follow me template -->
