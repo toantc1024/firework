@@ -389,7 +389,7 @@ body {
 .modal-content {
   border: solid rgb(255, 196, 0);
   border-radius: 1.5rem;
-  border-width: 10px;
+  border-width: 9.8px;
   padding: 20px;
   width: 100%;
   background: linear-gradient(to left, #ff1616, #fd1c1c);
@@ -787,7 +787,7 @@ body {
   box-sizing: border-box;
   width: 35px;
   height: 35px;
-  font-size: 30px;
+  font-size: 28px;
   text-align: center;
   vertical-align: middle;
   box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);

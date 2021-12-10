@@ -13,8 +13,8 @@ html, body {
   position: relative; */
 }
 .container {
-  border-top: solid #ffe392;
-  border-bottom: solid #ffe392;
+  border-top: 5px solid rgb(255, 196, 0);
+  border-bottom: 5px solid rgb(255, 196, 0);
   visibility: hidden;
   margin: 0 auto;
   overflow: hidden;
